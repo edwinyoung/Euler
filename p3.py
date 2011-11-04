@@ -13,7 +13,9 @@ def primeFactor(input):
 	    input /= i
 	    return primeFactor(input)
 	i += 1
+    factors.append(input)
     return input
 
 primeFactor(num)
-print max(factors) #somehow prints off 1471 instead of 6857
+factors.sort()
+print factors[-1] #somehow prints off 1471 instead of 6857
